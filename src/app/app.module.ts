@@ -27,7 +27,6 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-
     MdCoreModule,
     MdCardModule,
     MdButtonModule,
@@ -41,7 +40,6 @@ import { AppComponent } from './app.component';
     MdRadioModule,
     MdSidenavModule,
     MdTabsModule
-
   ],
   providers: [
     MdIconRegistry

@@ -1,0 +1,67 @@
+ /* For use in _color-definitions.scss */
+$palette-ordina:
+rgb(255, 250, 243)
+rgb(255, 216, 167)
+rgb(255, 192, 111)
+rgb(255, 161, 39)
+rgb(255, 147, 9)
+rgb(233, 131, 0)
+rgb(202, 114, 0)
+rgb(172, 97, 0)
+rgb(141, 79, 0)
+rgb(111, 62, 0)
+rgb(255, 250, 243)
+rgb(255, 216, 167)
+rgb(255, 147, 9)
+rgb(172, 97, 0)
+;
+
+$palette-ordina-50: nth($palette-ordina, 1);
+$palette-ordina-100: nth($palette-ordina, 2);
+$palette-ordina-200: nth($palette-ordina, 3);
+$palette-ordina-300: nth($palette-ordina, 4);
+$palette-ordina-400: nth($palette-ordina, 5);
+$palette-ordina-500: nth($palette-ordina, 6);
+$palette-ordina-600: nth($palette-ordina, 7);
+$palette-ordina-700: nth($palette-ordina, 8);
+$palette-ordina-800: nth($palette-ordina, 9);
+$palette-ordina-900: nth($palette-ordina, 10);
+$palette-ordina-A100: nth($palette-ordina, 11);
+$palette-ordina-A200: nth($palette-ordina, 12);
+$palette-ordina-A400: nth($palette-ordina, 13);
+$palette-ordina-A700: nth($palette-ordina, 14);
+
+
+$palette-mcgpalette1:
+rgb(232, 234, 246)
+rgb(197, 202, 233)
+rgb(159, 168, 218)
+rgb(121, 134, 203)
+rgb(92, 107, 192)
+rgb(63, 81, 181)
+rgb(57, 73, 171)
+rgb(48, 63, 159)
+rgb(40, 53, 147)
+rgb(26, 35, 126)
+rgb(140, 158, 255)
+rgb(83, 109, 254)
+rgb(61, 90, 254)
+rgb(48, 79, 254)
+;
+
+$palette-mcgpalette1-50: nth($palette-mcgpalette1, 1);
+$palette-mcgpalette1-100: nth($palette-mcgpalette1, 2);
+$palette-mcgpalette1-200: nth($palette-mcgpalette1, 3);
+$palette-mcgpalette1-300: nth($palette-mcgpalette1, 4);
+$palette-mcgpalette1-400: nth($palette-mcgpalette1, 5);
+$palette-mcgpalette1-500: nth($palette-mcgpalette1, 6);
+$palette-mcgpalette1-600: nth($palette-mcgpalette1, 7);
+$palette-mcgpalette1-700: nth($palette-mcgpalette1, 8);
+$palette-mcgpalette1-800: nth($palette-mcgpalette1, 9);
+$palette-mcgpalette1-900: nth($palette-mcgpalette1, 10);
+$palette-mcgpalette1-A100: nth($palette-mcgpalette1, 11);
+$palette-mcgpalette1-A200: nth($palette-mcgpalette1, 12);
+$palette-mcgpalette1-A400: nth($palette-mcgpalette1, 13);
+$palette-mcgpalette1-A700: nth($palette-mcgpalette1, 14);
+
+
