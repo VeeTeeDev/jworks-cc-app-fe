@@ -24,6 +24,8 @@ import { ContactsListComponent } from './contacts-list';
 
 import { JworksContactsService } from './jworks-contacts.service';
 
+import { Observable } from 'rxjs/Observable';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +53,9 @@ import { JworksContactsService } from './jworks-contacts.service';
   ],
   providers: [
     MdIconRegistry,
-    JworksContactsService
+    JworksContactsService,
+    HttpModule,
+    { provide: 'API_ENDPOINT', useValue: 'http://ec2-52-49-175-247.eu-west-1.compute.amazonaws.com:4201/api' }
   ],
   bootstrap: [AppComponent]
 })

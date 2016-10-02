@@ -10,6 +10,8 @@ export class ContactCardComponent implements OnInit {
 
   @Input() contact: Contact;
 
+  baseUrl = 'http://ec2-52-49-175-247.eu-west-1.compute.amazonaws.com:4201/';
+
   constructor() { }
 
   ngOnInit() {

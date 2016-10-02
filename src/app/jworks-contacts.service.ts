@@ -1,12 +1,14 @@
-import { Injectable } from '@angular/core';
-import { CC_DATA } from './data/cc-contacts';
+import { Injectable, Inject } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class JworksContactsService {
 
-  constructor() { }
+  constructor(private http: Http, @Inject('API_ENDPOINT') private apiEndpoint) { }
 
   getContacts () {
-    return CC_DATA;
+    return this.http.get(`${this.apiEndpoint}/jworks-contacts`)
+                    .map(res => res.json())
+                    .map(data => data.items);
   }
 }
