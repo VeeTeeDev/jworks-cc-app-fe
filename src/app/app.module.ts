@@ -20,13 +20,14 @@ import { MdTabsModule } from '@angular2-material/tabs';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header';
 import { ContactCardComponent } from './contact-card';
-
+import { ContactsListComponent } from './contacts-list';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ContactCardComponent
+    ContactCardComponent,
+    ContactsListComponent
   ],
   imports: [
     BrowserModule,
