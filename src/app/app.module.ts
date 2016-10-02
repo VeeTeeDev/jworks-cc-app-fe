@@ -18,10 +18,15 @@ import { MdSidenavModule } from '@angular2-material/sidenav';
 import { MdTabsModule } from '@angular2-material/tabs';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header';
+import { ContactCardComponent } from './contact-card';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    ContactCardComponent
   ],
   imports: [
     BrowserModule,

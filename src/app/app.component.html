@@ -1,2 +1,11 @@
-<div *ngIf="!loading">{{ title }}</div>
 <md-progress-circle *ngIf="loading" class="preloader" mode="indeterminate" color="primary"></md-progress-circle>
+<app-header *ngIf="!loading">{{ title }}</app-header>
+<md-card *ngIf="!loading" class="main">
+    <md-card-content>
+        <md-list>
+            <md-list-item>
+                <contact-card></contact-card>
+            </md-list-item>
+        </md-list>
+    </md-card-content>
+</md-card>

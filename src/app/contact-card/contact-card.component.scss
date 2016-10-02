@@ -1,0 +1,52 @@
+md-card.contact-card {
+    position: relative;
+    border: solid #e98300 1px;
+    margin: 5px;
+    padding: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 70%;
+    &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 20px 20px;
+        border-color: transparent transparent #e98400 transparent;
+    }
+    &:hover {
+        border-color: #333;
+        &:after {
+            border-color: transparent transparent #333 transparent;
+        }
+    }
+
+    p {
+      color: rgba(0,0,0,0.54);
+      font-size: 12px;
+      margin: Opx;
+    }
+
+    h3 {
+        margin: 0px;
+    }
+
+    md-icon.md-10.material-icons{
+      font-size: 10px;
+      height: 12px;
+      width: 12px;
+      margin-right: 1px;
+    }
+
+    md-card-title {
+        margin-bottom: 2px;
+        font-size: 20px !important;  
+    }
+
+    .contact-card-avatar {
+        float: left;
+        margin-right: 20px;
+    }
+}
