@@ -1,5 +1,10 @@
 @import "../_color-definitions";
 
+md-card.main {
+    max-height: 800px;
+    overflow-y: scroll;
+}
+
 md-list md-list-item .md-list-item {
     height: 75px !important;
 }

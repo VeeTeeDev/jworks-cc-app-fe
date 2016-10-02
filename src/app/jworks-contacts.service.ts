@@ -11,4 +11,10 @@ export class JworksContactsService {
                     .map(res => res.json())
                     .map(data => data.items);
   }
+
+  search(term: string) {
+    return this.http.get(`${this.apiEndpoint}/search?text=${term}`)
+                    .map(res => res.json())
+                    .map(data => data.items);
+  }
 }

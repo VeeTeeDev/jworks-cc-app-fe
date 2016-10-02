@@ -19,3 +19,20 @@ md-list {
         width: 100%;
     }
 }
+
+md-input {
+    width: calc(100% - 10px);
+    margin: 5px;
+    color: #e98300;
+    .md-input-underline {
+        border-top-color: #e98300 !important;
+        .md-input-ripple.md-focused {
+            background-color: #e98300 !important;
+        }
+    }    
+    &.split-view {
+        @media screen and (min-width: 768px) {
+            width: 40%;
+        }
+    }
+}

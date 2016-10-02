@@ -1,3 +1,4 @@
+<md-input (input)="search($event.target.value)" placeholder="Search contacts"></md-input>
 <md-list>
   <md-list-item *ngFor="let contact of contacts | async">
     <contact-card [contact]=contact ></contact-card>

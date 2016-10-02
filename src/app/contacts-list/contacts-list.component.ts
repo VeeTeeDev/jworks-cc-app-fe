@@ -17,4 +17,9 @@ export class ContactsListComponent implements OnInit {
   ngOnInit() {
     this.contacts = this.contactsService.getContacts();
   }
+
+  search(term: string) {
+    this.contacts = this.contactsService.search(term);
+  }
+
 }
