@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Contact } from '../models/cc-contact';
 import { JworksContactsService } from '../jworks-contacts.service';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 @Component({
   selector: 'app-contacts-list',
@@ -11,11 +12,15 @@ import { Observable } from 'rxjs/Observable';
 export class ContactsListComponent implements OnInit {
 
   contacts: Observable<Array<Contact>>;
+  private terms$ = new Subject<string>();
 
   constructor(private contactsService: JworksContactsService) { }
 
   ngOnInit() {
     this.contacts = this.contactsService.getContacts();
+    this.terms$.debounceTime(400)
+               .distinctUntilChanged()
+               .subscribe(term => this.search(term));
   }
 
   search(term: string) {

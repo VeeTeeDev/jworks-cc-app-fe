@@ -25,6 +25,11 @@ import { ContactsListComponent } from './contacts-list';
 import { JworksContactsService } from './jworks-contacts.service';
 
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/debounceTime'; 
+import 'rxjs/add/operator/distinctUntilChanged'; 
+import { Subject } from 'rxjs/Subject';
 
 @NgModule({
   declarations: [
