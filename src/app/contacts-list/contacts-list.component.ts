@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact } from '../models/cc-contact';
-import { CC_DATA } from '../data/cc-contacts';
+import { JworksContactsService } from '../jworks-contacts.service';
 
 @Component({
   selector: 'app-contacts-list',
@@ -9,11 +9,11 @@ import { CC_DATA } from '../data/cc-contacts';
 })
 export class ContactsListComponent implements OnInit {
 
-  contacts: Array<Contact> = CC_DATA;
+  contacts: Array<Contact>;
 
-  constructor() { }
+  constructor(private contactsService: JworksContactsService) { }
 
   ngOnInit() {
+    this.contacts = this.contactsService.getContacts();
   }
-
 }

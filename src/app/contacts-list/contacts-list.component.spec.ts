@@ -5,11 +5,13 @@ import { ContactsListComponent } from './contacts-list.component';
 import { Contact } from '../models/cc-contact';
 import { CC_DATA } from '../data/cc-contacts';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { JworksContactsService } from '../jworks-contacts.service';
 
 
 describe('Component: ContactsList', () => {
   it('should create an instance', () => {
-    let component = new ContactsListComponent();
+    let service = new JworksContactsService();
+    let component = new ContactsListComponent(service);
     expect(component).toBeTruthy();
   });
 });
@@ -31,9 +33,11 @@ fdescribe('Component shallow: ContactsListComponent', () => {
             declarations: [
                 ContactsListComponent
             ],
+            providers: [
+                JworksContactsService
+            ],
             schemas: [NO_ERRORS_SCHEMA]
         });
-
         fixture = TestBed.createComponent(ContactsListComponent);
         component = fixture.componentInstance;
         element = fixture.nativeElement;

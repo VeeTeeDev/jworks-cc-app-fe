@@ -22,6 +22,8 @@ import { HeaderComponent } from './header';
 import { ContactCardComponent } from './contact-card';
 import { ContactsListComponent } from './contacts-list';
 
+import { JworksContactsService } from './jworks-contacts.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,8 @@ import { ContactsListComponent } from './contacts-list';
     MdTabsModule
   ],
   providers: [
-    MdIconRegistry
+    MdIconRegistry,
+    JworksContactsService
   ],
   bootstrap: [AppComponent]
 })
