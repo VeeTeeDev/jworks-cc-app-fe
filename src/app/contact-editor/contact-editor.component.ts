@@ -20,4 +20,16 @@ export class ContactEditorComponent implements OnInit {
                         .subscribe(contact => this.contact = contact);
   }
 
+  cancel (contact: Contact) {
+    this.toDetails(contact);
+  }
+
+  save (contact: Contact) {
+    this.contactsService.updateContact(contact)
+                       .subscribe(() => this.toDetails(contact));
+  }
+
+  private toDetails (contact: Contact) {
+    this.router.navigate(['/contact', contact.id ]);
+  }
 }

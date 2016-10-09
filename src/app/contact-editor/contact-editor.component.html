@@ -40,10 +40,10 @@
     
   </md-card-content>
   <md-card-actions layout="column">
-      <button md-mini-fab class="md-primary js-cancel" [routerLink]="['/contact', contact.id]" title="back">
+      <button md-mini-fab class="md-primary js-cancel" (click)="cancel(contact)" title="back">
         <md-icon class="md-36">close</md-icon>
       </button>
-      <button md-mini-fab class="md-primary js-save" [routerLink]="['/contact', contact.id]" title="back">
+      <button md-mini-fab class="md-primary js-save" (click)="save(contact)" title="back">
         <md-icon class="md-36">check</md-icon>
       </button>
    </md-card-actions>

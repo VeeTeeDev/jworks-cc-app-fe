@@ -1,5 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
 import { Http } from '@angular/http';
+import { Contact } from './models/cc-contact';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -22,6 +23,10 @@ export class JworksContactsService {
   getContact (id: number | string) {
     return this.http.get(`${this.apiEndpoint}/jworks-contacts/${id}`)
                     .map(res => res.json().item);
+  }
+
+  updateContact(contact: Contact) {
+    return this.http.put(`${this.apiEndpoint}/jworks-contacts/${contact.id}`, contact);
   }
 
 }
