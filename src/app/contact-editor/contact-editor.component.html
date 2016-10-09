@@ -1,0 +1,50 @@
+<md-card md-theme="'default'" class="container">
+  <md-card-title>
+    <span class="md-headline">{{contact?.name || 'New' }}</span>
+    <span class="md-subhead"></span>  
+  </md-card-title>
+  <md-card-content layout="row" layout-align="space-between">
+    <div class="md-content-inline">
+        <md-card>
+          <div class="row">
+            <md-input placeholder="Email" [(ngModel)]="contact.email"></md-input>  
+          </div>
+          <div class="row">
+            <md-input placeholder="Phone" [(ngModel)]="contact.phone"></md-input>
+          </div>
+          <div class="row">
+            <md-input placeholder="Birthday" [(ngModel)]="contact.birthday"></md-input>
+          </div>
+          <div class="row">
+            <md-input placeholder="Website" [(ngModel)]="contact.website"></md-input>
+          </div>
+        </md-card>
+        <md-card>
+        <fieldset>
+          <legend><md-icon class="md-10">location_city</md-icon> Address</legend>
+          <div class="row">
+            <md-input placeholder="Street" [(ngModel)]="contact.address.street"></md-input>
+          </div>
+          <div class="row">
+            <md-input placeholder="Zip" [(ngModel)]="contact.address.zip"></md-input>
+          </div>
+          <div class="row">
+            <md-input placeholder="City" [(ngModel)]="contact.address.city"></md-input>
+          </div>
+          <div class="row">
+            <md-input placeholder="Country" [(ngModel)]="contact.address.country"></md-input>
+          </div>
+        </fieldset>
+        </md-card>
+    </div>
+    
+  </md-card-content>
+  <md-card-actions layout="column">
+      <button md-mini-fab class="md-primary js-cancel" [routerLink]="['/contact', contact.id]" title="back">
+        <md-icon class="md-36">close</md-icon>
+      </button>
+      <button md-mini-fab class="md-primary js-save" [routerLink]="['/contact', contact.id]" title="back">
+        <md-icon class="md-36">check</md-icon>
+      </button>
+   </md-card-actions>
+</md-card>

@@ -2,6 +2,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ContactsListComponent } from './contacts-list';
 import { ContactDetailComponent } from './contact-detail';
+import { ContactEditorComponent } from './contact-editor';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'contact/:id',
     component: ContactDetailComponent
+  },
+  {
+    path: 'contact/:id/edit',
+    component: ContactEditorComponent
   },
   {
     path: '**',

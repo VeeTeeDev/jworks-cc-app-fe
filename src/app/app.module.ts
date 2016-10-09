@@ -22,6 +22,7 @@ import { HeaderComponent } from './header';
 import { ContactCardComponent } from './contact-card';
 import { ContactsListComponent } from './contacts-list';
 import { ContactDetailComponent } from './contact-detail';
+import { ContactEditorComponent } from './contact-editor';
 
 import { JworksContactsService } from './jworks-contacts.service';
 
@@ -40,7 +41,8 @@ import { Subject } from 'rxjs/Subject';
     HeaderComponent,
     ContactCardComponent,
     ContactsListComponent,
-    ContactDetailComponent
+    ContactDetailComponent,
+    ContactEditorComponent
   ],
   imports: [
     routing,
