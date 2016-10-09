@@ -6,10 +6,19 @@ import { Contact } from '../models/cc-contact';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('Component: ContactCard', () => {
+
+  beforeEach(() => {
+      TestBed.configureTestingModule({
+        providers: [
+         { provide: 'API_BASE', useValue: 'http://ec2-52-49-175-247.eu-west-1.compute.amazonaws.com:4201/'}
+        ]
+    });
+  });
+
   it('should create an instance', () => {
     let component: ContactCardComponent;
     beforeEach(() => {
-        component = new ContactCardComponent;
+        component = new ContactCardComponent('API_BASE');
     });
 
     it('Should be defined after creation', () => {
@@ -52,6 +61,9 @@ fdescribe('Component shallow: ContactCardComponent', () => {
         TestBed.configureTestingModule({
             declarations: [
                 ContactCardComponent
+            ],
+             providers: [
+                { provide: 'API_BASE', useValue: 'http://ec2-52-49-175-247.eu-west-1.compute.amazonaws.com:4201/'}
             ],
             schemas: [NO_ERRORS_SCHEMA]
         });

@@ -21,8 +21,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header';
 import { ContactCardComponent } from './contact-card';
 import { ContactsListComponent } from './contacts-list';
+import { ContactDetailComponent } from './contact-detail';
 
 import { JworksContactsService } from './jworks-contacts.service';
+
+import { routing } from './app.routes';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -36,9 +39,11 @@ import { Subject } from 'rxjs/Subject';
     AppComponent,
     HeaderComponent,
     ContactCardComponent,
-    ContactsListComponent
+    ContactsListComponent,
+    ContactDetailComponent
   ],
   imports: [
+    routing,
     BrowserModule,
     FormsModule,
     HttpModule,
@@ -60,7 +65,8 @@ import { Subject } from 'rxjs/Subject';
     MdIconRegistry,
     JworksContactsService,
     HttpModule,
-    { provide: 'API_ENDPOINT', useValue: 'http://ec2-52-49-175-247.eu-west-1.compute.amazonaws.com:4201/api' }
+    { provide: 'API_ENDPOINT', useValue: 'http://ec2-52-49-175-247.eu-west-1.compute.amazonaws.com:4201/api' },
+    { provide: 'API_BASE', useValue: 'http://ec2-52-49-175-247.eu-west-1.compute.amazonaws.com:4201/'}
   ],
   bootstrap: [AppComponent]
 })

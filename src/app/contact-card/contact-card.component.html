@@ -1,9 +1,11 @@
 <md-card class="contact-card">
-      <img md-card-avatar class="contact-card-avatar" src="{{ baseUrl + contact.image}}" alt="{{contact.name}}">
-      <md-card-title>{{contact.name}}</md-card-title>
-      <md-card-subtitle>
-        <span><md-icon class="md-10">phone</md-icon>{{contact.phone}} </span> 
-        &nbsp;&nbsp;&nbsp; 
-        <span><md-icon class="md-10">email</md-icon>{{contact.email}} </span>
-      </md-card-subtitle>
+  <a [routerLink]="['/contact', contact.id]">
+    <img md-card-avatar class="contact-card-avatar" src="{{ apiBase + contact.image}}" alt="{{contact.name}}">
+  </a>
+  <md-card-title>{{contact.name}}</md-card-title>
+  <md-card-subtitle>
+    <span><md-icon class="md-10">phone</md-icon>{{contact.phone}} </span> 
+    &nbsp;&nbsp;&nbsp; 
+    <span><md-icon class="md-10">email</md-icon>{{contact.email}} </span>
+  </md-card-subtitle>        
 </md-card>

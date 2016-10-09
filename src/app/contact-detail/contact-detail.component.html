@@ -1,0 +1,58 @@
+<md-card md-theme="'default'" class="container">
+  <md-card-title>
+    <span class="md-headline">{{contact?.name}}</span>
+    <span class="md-subhead"></span>
+  </md-card-title>
+  <md-card-content layout="row" layout-align="space-between">
+    <div class="md-media-xl card-media md-content-inline">
+      <img *ngIf="contact" src="{{ apiBase + contact?.image }}">
+    </div>
+    <div class="md-content-inline">
+        <md-card>
+          <div class="row">
+            <span class="col s6"><md-icon class="md-10">email</md-icon> Email:</span>
+            <span class="col s6">{{contact?.email || '-'}}</span>
+          </div>
+          <div class="row">
+            <span class="col s6"><md-icon class="md-10">phone</md-icon> Phone:</span>
+            <span class="col s6">{{contact?.phone || '-'}}</span>
+          </div>
+          <div class="row">
+            <span class="col s6"><md-icon class="md-10">cake</md-icon> Birthday:</span>
+            <span class="col s6">{{contact?.birthday || '-'}}</span>
+          </div>
+          <div class="row">
+            <span class="col s6"><md-icon class="md-10">public</md-icon> Website:</span>
+            <span class="col s6">{{contact?.website || '-'}}</span>
+          </div>
+        </md-card>
+        <md-card>
+        <fieldset>
+          <legend><md-icon class="md-10">location_city</md-icon> Address</legend>
+          <div class="row">
+            <span class="col s6">Street:</span>
+            <span class="col s6">{{contact?.address?.street || '-'}}</span>
+          </div>
+          <div class="row">
+            <span class="col s6">Zipcode:</span>
+            <span class="col s6">{{contact?.address?.zip || '-'}}</span>
+          </div>
+          <div class="row">
+            <span class="col s6">City:</span>
+            <span class="col s6">{{contact?.address?.city || '-'}}</span>
+          </div>
+          <div class="row">
+            <span class="col s6">Country:</span>
+            <span class="col s6">{{contact?.address?.country || '-'}}</span>
+          </div>
+        </fieldset>
+        </md-card>
+    </div>
+    
+  </md-card-content>
+  <md-card-actions layout="column">
+       <button md-mini-fab class="md-primary js-back" routerLink="/" title="back">
+       <md-icon class="md-36">arrow_back</md-icon>
+      </button>
+    </md-card-actions>
+</md-card>

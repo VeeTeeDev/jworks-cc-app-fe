@@ -1,0 +1,39 @@
+.container, md-card {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.card-media img {
+    border-radius: 200px;
+    margin: 10px auto 20px;
+    display: block;
+    border: 5px solid #e98400;
+    max-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+md-icon.md-10.material-icons{
+    font-size: 10px;
+    height: 12px;
+    width: 12px;
+    margin-right: 1px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+}
+
+.float-right {
+    float: right;
+    margin-left: 10px
+}
+
+button.js-edit {
+    &::after {
+        background-color: rgba(0,0,0,0) !important;
+    }
+    opacity: 0.3;
+    &:hover {
+        opacity: 1;
+    }
+}

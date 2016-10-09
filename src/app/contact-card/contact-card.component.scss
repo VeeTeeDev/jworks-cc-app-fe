@@ -49,4 +49,15 @@ md-card.contact-card {
         float: left;
         margin-right: 20px;
     }
+    &:hover .about{
+        opacity: 1;
+    }
+}
+
+.about {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: grey !important;
+    opacity: 0.3;
 }

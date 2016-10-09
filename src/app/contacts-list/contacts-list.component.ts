@@ -3,6 +3,8 @@ import { Contact } from '../models/cc-contact';
 import { JworksContactsService } from '../jworks-contacts.service';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
 
 @Component({
   selector: 'app-contacts-list',
