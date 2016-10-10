@@ -7,8 +7,4 @@ describe('jworks-cc-app-fe App', function() {
     page = new JworksCcAppFePage();
   });
 
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
-  });
 });
