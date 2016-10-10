@@ -28,7 +28,9 @@ describe('Editor Page', function () {
  
   it('save new website', ()=> {
     let website = page.getWebsite();
+    website.clear();     
     website.sendKeys(pageName);     
+    
     page.clickOnSave().then(()=> {
       let detailPage = new DetailPage();
       detailPage.getWebsite().getText().then((val) => {
